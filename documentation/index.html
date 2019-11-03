@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>TinyMCE 4/5 plugin Youtube (V3 API) search and insert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ivor">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    </head>
+
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+	<a class="brand" href="index.html">TinyMCE 4/5 plugin Youtube (V3 API) search and insert</a> <!-- TIP: Change this for the name of your file -->
+     	<div class="nav-collapse">
+        <ul class="nav">
+              <li><a href="#top" class="active">Top</a></li>
+              <li><a href="#markup">Markup</a></li>
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#customization">Customization</a></li>
+              <li><a href="#credits">Credits</a></li>
+          </ul>
+</div>
+	</div>
+		</div>
+			</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->
+
+<div class="container">
+
+	<div class="masthead">
+	    <h1>TinyMCE 4/5 plugin Youtube (V3 API) search and insert</h1>
+	    <img src="assets/img/screen.png" width="235" height="200" style="float:left;">
+	    <p>A drag and drop plugin for the new <a href="http://www.tinymce.com/index.php" target="_blank">tinyMCE 4/5 WYSIWYG</a> editor.
+	    <br />Build with <a href="http://getbootstrap.com/2.3.2/index.html" target="_blank">Bootstrap</a></p>
+        <p>Search for youtube video's, autocomplete suggestions, see a preview and insert into the tinyMCE 4/5 WYSIWYG editor
+        <p>You can select some params like width, height, dark or light version</p>
+	    <p class="download-info"> <a href="#demo" class="btn btn-primary btn-large">DEMO</a></p>
+	    <p class="download-info"> <a href="http://codecanyon.net/user/ceasar/portfolio?ref=ceasar" class="btn btn-primary btn-large">Item Support</a></p>
+	    <p class="download-info"> <a href="http://codecanyon.net/user/ceasar/portfolio?ref=ceasar" class="btn btn-primary btn-large">BUY NOW !</a></p>
+	</div> <!-- masthead -->
+
+   <div id="intro">
+    <p class="highlight hero-unit">Thank you for purchasing the TinyMCE 4/5 plugin Youtube search and insert. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/ceasar">here</a>.</p>
+  </div> <!-- intro -->
+
+<section id="markup">
+	<div class="page-header">
+	  <h1>Markup <small>Markup customization and highlights</small></h1>
+	</div>
+
+    <div class="row">
+      <div class="span3">
+        <h3>General Markup</h3>
+        <p>Drag and drop the youtube folder into the folder tinymce/plugins</p>
+        <p>Now add 'youtube' to the plugins: and toolbar:</p>
+        <p><b>Done !</b></p>
+       <p>If you want to use this into a cms you can change the insert like you want.  I made 2 examples. One the normal iframe and two a image placeholder (see demo) so that after saving the document you can simple do a replace.</p>
+      </div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;your installation path&gt;/tinymce/tinymce.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script type=&quot;text/javascript&quot;&gt;<br/>tinymce.init({<br/>selector: &quot;textarea&quot;,<br/>language : &quot;en&quot;,<br/>    plugins: [<br/>        &quot;advlist autolink lists link image charmap print preview anchor&quot;,<br/>        &quot;searchreplace visualblocks code fullscreen&quot;,<br/>        &quot;insertdatetime media table contextmenu paste youtube&quot;<br/>    ],<br/>    toolbar: &quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image youtube&quot;<br/>});<br/>&lt;/script&gt;<br/><br/>&lt;form method=&quot;post&quot; action=&quot;somepage&quot;&gt;<br/>    &lt;textarea name=&quot;content&quot; style=&quot;width:100%&quot;&gt;&lt;/textarea&gt;<br/>&lt;/form&gt;
+</pre>
+      </div>
+        </div>
+
+  </section> <!-- Markup -->
+
+<section id="demo">
+    <div class="page-header">
+       <h1>Demo</h1>
+     </div>
+
+<div class="row">
+    <div class="span3">
+  <h3></h3>
+  <p>Click on the <img src="tinymce/plugins/youtube/icon.png" width="16" height="16"> button</p>
+  <p><b>In this example I use the image placeholder !</b></p>
+  <p>( Default is iframe insert )</b></p>
+</div>
+
+<div class="span9">
+<script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    language : 'en',
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste youtube"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image youtube code"
+});
+</script>
+
+<form method="post" action="somepage">
+    <textarea name="content" style="width:80%;height:400px;"></textarea>
+</form>
+      </div>
+        </div>
+
+  </section> <!-- Markup -->
+ <hr />
+<div class="row">
+    <div class="span3">
+  <h3>Output</h3>
+  <p>If you want to change the output open tinymce/plugins/youtube/js/youtube.js</p>
+   <p>You will find on line 14</p>
+   <p>You can also change some Youtube search parameters like 'orderby' or 'maxResults'</p>
+   <p>You also can set it to an image placeholder and convert it on the server side. See 'Make your own markup' how to change and the demo.</p>
+   <p>Get your <a href="https://console.developers.google.com/project">API V3 key here</a></p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+//Set output to 'iframe' or 'placeholder'
+var youtput = 'iframe';
+//Set to http or https
+var secure = 'https';
+//Max results per request
+var max = 30;
+//Api key 3 version (https://console.developers.google.com/project)
+var key = 'here the API key V3';
+//use Slider or inputfields
+var slider = true;
+//Set order
+//date : Resources are sorted in reverse chronological order based on the date they were created.
+//rating : Resources are sorted from highest to lowest rating.
+//relevance : Resources are sorted based on their relevance to the search query. This is the default value for this parameter.
+//title : Resources are sorted alphabetically by title.
+//viewCount : Resources are sorted from highest to lowest number of views.
+var order = 'relevance';
+//Use suggest search words
+var suggest = true;
+//Set default width and height
+var width = 560;
+var height = 315;
+<br /><br />
+//The normal html inserted into tinyMCE is an iframe. See markup how to change.
+var sHTML = '&lt;iframe title=&quot;' + $('#titleURL').val() + '&quot; width=&quot;' + $('#widthURL').val() + '&quot; height=&quot;' + $('#heightURL').val() + '&quot; src=&quot;' + sEmbedUrl + '?wmode=opaque&amp;theme=' + $('#skinURL').val() + '&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;';
+
+</pre>
+      </div>
+        </div>
+
+    <hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>Make your own markup</h3>
+  <p>You will find after line 135</p>
+  <p>Here you see the markup if you select the image placeholder.</p>
+  <p>Change to whatever you want</p>
+  <h3>Example ubb insert</h3>
+  <p>Remember you have to change this for yourself</p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+var sHTML = '&lt;img src=&quot;' + secure + '://img.youtube.com/vi/' + getVideoId($('#inpURL').val()) + '/0.jpg&quot; alt=&quot;' + $('#titleURL').val() + '&quot; width=&quot;' + $('#widthURL').val() + '&quot; height=&quot;' + $('#heightURL').val() + '&quot; data-video=&quot;youtube&quot; data-skin=&quot;' + $('#skinURL').val() + '&quot; data-id=&quot;' + getVideoId($('#inpURL').val()) + '&quot;&gt;';
+</pre>
+<pre class="prettyprint linenums">
+//Example UBB
+[youtube]' + getVideoId($('#inpURL').val()) + '[/youtube]
+</pre>
+      </div>
+        </div>
+  </section> <!-- Markup -->
+
+    <hr />
+
+      <section id="customization">
+	  <div class="page-header">
+	    <h1>Customization</h1>
+	  </div>
+	  <div class="row">
+	    <div class="span3">
+	      <h3></h3>
+	      <p>Language's</p>
+	    </div>
+	    <!-- / .span3 -->
+	    <div class="span9">
+Open tinymce/plugins/youtube/langs/en.js. Here you find a few words which you can change into your own language and save it to the same name as you use for the lang set in the TinyMCE init.<br /><br />
+Example : if set <b>language : &quot;de&quot;,</b> then make a lang file called tinymce/plugins/youtube/langs/de.js<br />
+If the lang file is missing in the tinymce/plugins/youtube/langs/ TinyMCE it will load the english version!.
+
+	    </div>
+	    <!-- accordion .span9 -->
+	  </div>
+	  <!-- /end row -->
+	</section> <!-- customization -->
+
+	<section id="credits">
+	  <div class="page-header">
+	    <h1>Credits Files</h1>
+	  </div>
+	  <p>I've used the following files as listed.</p>
+	  <h3>JavaScript</h3>
+	  <ol>
+	    <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+	    <li><a href="http://tikku.com/jquery-jqtube-util" target="_blank">jQuery.jQTubeUtil.js</a></li>
+        <li><a href="http://getbootstrap.com/2.3.2/index.html/" target="_blank">Bootstrap</a></li>
+        <li><a href="https://github.com/jonnyreeves/jquery-Mustache" target="_blank">Mustache</a></li>
+        <li><a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
+        <li><a href="http://www.eyecon.ro/bootstrap-slider/" target="_blank">bootstrap slider</a></li>
+	  </ol>
+	</section><!-- Credits -->
+
+      <hr />
+
+<div class="goodbye">
+    <p>Once again, thank you so much for purchasing this plugin. As I said at the beginning, I'd be glad to help you if you have any questions relating to this app. No guarantees, but I'll do my best to assist.</p>
+    <p>Ceasar</p>
+  </div>
+
+      <hr />
+
+<footer>
+    <p>&copy; Ceasar Feijen - <a href="http://www.cfconsultancy.nl">CFconsultancy</a> 2019</p>
+</footer>
+
+</div><!-- /container -->
+
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/bootstrap-transition.js"></script>
+<script src="assets/js/bootstrap-alert.js"></script>
+<script src="assets/js/bootstrap-modal.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/bootstrap-tab.js"></script>
+<script src="assets/js/bootstrap-tooltip.js"></script>
+<script src="assets/js/bootstrap-popover.js"></script>
+<script src="assets/js/bootstrap-button.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>
